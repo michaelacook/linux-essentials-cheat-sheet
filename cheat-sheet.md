@@ -24,7 +24,7 @@
 
 - Add login shell to user: 
 
-    ```sudo usermod -s [path to shell]```
+    ```sudo usermod -s [/path/to/shell]```
 
 - Add a password to a user: 
 
@@ -88,7 +88,9 @@
 
     ```ip addr show```
 - Test connectivity:
-    ``` netstat | grep -E "^t?c?u?d?p"```
+
+    ```ping [domain|IP]```
+- View DNS configurations:
 
     ```cat /etc/resolv.conf```
 - Query A record for a host (get IP address for a domain): 
