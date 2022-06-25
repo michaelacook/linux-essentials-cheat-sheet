@@ -79,6 +79,18 @@
 - Remove a user from a group:
 
     ```sudo gpasswd -d [user] [group]``` 
+- Login as a user: 
+
+    ```su [user]```
+- Login as the root user: 
+
+    ```sudo su -```
+- Login as the root user: 
+
+    ```sudo -i```
+- Logout as a user: 
+
+    ```exit```
 
 -----
 
