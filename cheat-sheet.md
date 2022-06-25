@@ -178,3 +178,11 @@
 - View all running processes for a user in BSD syntax: 
 
     ```ps aux | grep -E "^user"```
+- View number of running processes: 
+
+    ```ps aux | wc -l```
+- View files associated with a process: 
+
+    ```ll /proc/[PID]```
+
+-----
