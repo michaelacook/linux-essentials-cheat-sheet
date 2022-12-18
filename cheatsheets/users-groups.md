@@ -1,62 +1,97 @@
 ## Users and Groups
 
-- View local users: 
+View local users: 
 
-    ```cat /etc/passwd```
+```
+cat /etc/passwd
+```
 
-- View users password info:
+View users password info:
 
-    ```sudo cat /etc/shadow```
+```
+sudo cat /etc/shadow
+```
 
-- Create a user: 
+Create a user: 
 
-    ```sudo useradd [username]```
+```
+sudo useradd [username]
+```
 
-- Create a user with a home directory: 
+Create a user with a home directory: 
 
-    ```sudo useradd -m [username]```
+```
+sudo useradd -m [username]
+```
 
-- Add home directory to user: 
+Add home directory to user: 
 
-    ```sudo mkhomedir_helper [username]```
+```
+sudo mkhomedir_helper [username]
+```
 
-- Add login shell to user: 
+Add login shell to user: 
 
-    ```sudo usermod -s [/path/to/shell]```
+```
+sudo usermod -s [/path/to/shell]
+```
 
-- Add a password to a user: 
+Add full name to a user account
 
-    ```sudo passwd [user]```
+```
+usermod -c "Full Name" [user]
+```
 
-- Lock/disable a user's password: 
 
-    ```sudo usermod -L [user]```
+Add a password to a user: 
 
-- Unlock/enable a user's password: 
+```
+sudo passwd [user]
+```
 
-    ```sudo usermod -U [user]```
+Lock/disable a user's password: 
 
-- Create a group: 
+```
+sudo usermod -L [user]
+```
 
-    ```sudo groupadd [group]```
+Unlock/enable a user's password: 
 
-- Add user to a group: 
+```
+sudo usermod -U [user]
+```
 
-    ```sudo usermod -a -G [groupname] [user]```
+Create a group: 
 
-- Then optionally run `sudo source /etc/profile`
+```
+sudo groupadd [group]
+```
 
-- Give a user sudo privileges: 
+Add user to a group: 
 
-    ```sudo usermod -aG sudo [user]```
+```
+sudo usermod -a -G [groupname] [user]
+```
 
-- Give a user sudo privileges on RHEL & derivatives: 
+Then optionally run `sudo source /etc/profile`
 
-    ```sudo usermod -aG wheel [user]```
+Give a user sudo privileges: 
 
-- Add all members of a group to the sudoer's group:
+```
+sudo usermod -aG sudo [user]
+```
 
-    ```sudo visudo```
+Give a user sudo privileges on RHEL & derivatives: 
+
+```
+sudo usermod -aG wheel [user]
+```
+
+Add all members of a group to the sudoer's group:
+
+```
+sudo visudo
+```
 - scroll to `%sudo` and add 
 
     ```bash 
@@ -66,26 +101,44 @@
     groupname ALL=(ALL:ALL) ALL
     ```
 
-- Delete a user: 
+Delete a user: 
 
-    ```sudo userdel [user]```
+```
+sudo userdel [user]
+```
 
-- Delete a group: 
+Delete a group: 
 
-    ```sudo groupdel [group]```
+```
+sudo groupdel [group]
+```
 
-- Remove a user from a group:
+Remove a user from a group:
 
-    ```sudo gpasswd -d [user] [group]``` 
-- Login as a user: 
+```
+sudo gpasswd -d [user] [group]
+``` 
 
-    ```su [user]```
-- Login as the root user: 
+Login as a user: 
 
-    ```sudo su -```
-- Login as the root user: 
+```
+su [user]
+```
 
-    ```sudo -i```
-- Logout as a user: 
+Login as the root user: 
 
-    ```exit```
+```
+sudo su -
+```
+
+Login as the root user: 
+
+```
+sudo -i
+```
+
+Logout as a user: 
+
+```
+exit
+```
