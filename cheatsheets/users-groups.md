@@ -6,31 +6,31 @@ View local users:
 cat /etc/passwd
 ```
 
-View users password info:
+View users password info
 
 ```
 sudo cat /etc/shadow
 ```
 
-Create a user: 
+Create a user
 
 ```
 sudo useradd [username]
 ```
 
-Create a user with a home directory: 
+Create a user with a home directory 
 
 ```
 sudo useradd -m [username]
 ```
 
-Add home directory to user: 
+Add home directory to user 
 
 ```
 sudo mkhomedir_helper [username]
 ```
 
-Add login shell to user: 
+Add login shell to user 
 
 ```
 sudo usermod -s [/path/to/shell]
@@ -42,20 +42,25 @@ Add full name to a user account
 usermod -c "Full Name" [user]
 ```
 
-
-Add a password to a user: 
+Add a password to a user
 
 ```
 sudo passwd [user]
 ```
 
-Lock/disable a user's password: 
+Require password reset on first login
+
+```
+passwd -e [user]
+```
+
+Lock/disable a user's password 
 
 ```
 sudo usermod -L [user]
 ```
 
-Unlock/enable a user's password: 
+Unlock/enable a user's password 
 
 ```
 sudo usermod -U [user]
@@ -101,43 +106,49 @@ sudo visudo
     groupname ALL=(ALL:ALL) ALL
     ```
 
-Delete a user: 
+Delete a user 
 
 ```
 sudo userdel [user]
 ```
 
-Delete a group: 
+Delete a user and their home directory simultaneously
+
+```
+sudo userdel -r [username]
+```
+
+Delete a group 
 
 ```
 sudo groupdel [group]
 ```
 
-Remove a user from a group:
+Remove a user from a group
 
 ```
 sudo gpasswd -d [user] [group]
 ``` 
 
-Login as a user: 
+Login as a user 
 
 ```
 su [user]
 ```
 
-Login as the root user: 
+Login as the root user 
 
 ```
 sudo su -
 ```
 
-Login as the root user: 
+Login as the root user
 
 ```
 sudo -i
 ```
 
-Logout as a user: 
+Logout as a user
 
 ```
 exit
